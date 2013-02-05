@@ -10,7 +10,11 @@
         "behat/behat": "2.4.4",
         "behat/mink-extension": "*",
         "behat/mink-browserkit-driver": "*",
-        "behat/mink-goutte-driver": ">=1.0.3"
+        "behat/mink-goutte-driver": ">=1.0.3",
+		"phpspec/php-diff": "*@dev",
+        "phpspec/phpspec2": "dev-develop",
+        "symfony/dependency-injection": "*",
+        "symfony/config": "*"
     },
     "require-dev": {
         "phpspec/phpspec2": "dev-develop"
@@ -18,6 +22,8 @@
     "autoload": {
         "psr-0": {
             "MageTest": "src/",
+			"MageTest\\PHPSpec2\\MagentoExtension": "src",
+			"Mage": "vendor/magento/app/code/core",
             "": [
                 "vendor/magento/app",
                 "vendor/magento/app/code/local",
