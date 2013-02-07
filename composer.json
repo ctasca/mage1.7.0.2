@@ -1,5 +1,5 @@
 {
-    "name": "magetest/magento-behat-extension",
+    "name": "magento/dev",
     "description": "Magento Behat extension",
     "type": "library",
     "keywords": ["behat","bdd","magento"],
@@ -7,23 +7,32 @@
     "license": "MIT",
     "require": {
         "php": ">=5.3.0",
-        "behat/behat": "2.4.4",
+        "behat/behat": "2.4.*@stable",
         "behat/mink-extension": "*",
         "behat/mink-browserkit-driver": "*",
         "behat/mink-goutte-driver": ">=1.0.3",
+		"behat/mink-sahi-driver": "*",
 		"phpspec/php-diff": "*@dev",
         "phpspec/phpspec2": "dev-develop",
         "symfony/dependency-injection": "*",
-        "symfony/config": "*"
+        "symfony/config": "*",
+		"symfony/css-selector":  ">=2.0.0,<2.2.0-dev",
+		"magehat/magehat": "dev-develop"
     },
     "require-dev": {
-        "phpspec/phpspec2": "dev-develop"
+        "phpspec/phpspec2": "dev-develop",
+		"symfony/finder":   ">=2.0.0,<2.2.0-dev"
     },
+	"repositories": [
+        {
+             "type": "vcs",
+             "url": "git@github.com:ctasca/magehat.git"
+        }
+    ],
     "autoload": {
         "psr-0": {
             "MageTest": "src/",
-			"MageTest\\PHPSpec2\\MagentoExtension": "src",
-			"Mage": "vendor/magento/app/code/core",
+			"Magehat": "vendor/magehat/magehat/src/",
             "": [
                 "vendor/magento/app",
                 "vendor/magento/app/code/local",
@@ -41,27 +50,5 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "dev",
-    "authors": [
-        {
-            "name": "Alistair Stead",
-            "email": "astead@sessiondigital.com"
-        },
-        {
-            "name": "Marcello Duarte",
-            "email": "mduarte@sessiondigital.com"
-        },
-        {
-            "name": "Sarunas Valaskevicius",
-            "email": "svalaskevicius@sessiondigital.com"
-        },
-        {
-            "name": "Daniel Kidanemariam",
-            "email": "dkidanemariam@sessiondigital.com"
-        },
-        {
-            "name": "Mark Slocock",
-            "email": "mark@gpmd.co.uk"
-        }
-    ]
+    "minimum-stability": "dev"
 }
