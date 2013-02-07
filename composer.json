@@ -17,7 +17,8 @@
         "symfony/dependency-injection": "*",
         "symfony/config": "*",
 		"symfony/css-selector":  ">=2.0.0,<2.2.0-dev",
-		"magehat/magehat": "dev-develop"
+		"magehat/magehat": "dev-develop",
+		"magetest/magetest": "dev-develop"
     },
     "require-dev": {
         "phpspec/phpspec2": "dev-develop",
@@ -27,11 +28,15 @@
         {
              "type": "vcs",
              "url": "git@github.com:ctasca/magehat.git"
+        },
+		{
+             "type": "vcs",
+             "url": "git@git.gpmd.net:thirdparty/magetest.git"
         }
     ],
     "autoload": {
         "psr-0": {
-            "MageTest": "src/",
+            "MageTest": "vendor/magetest/magetest/src/",
 			"Magehat": "vendor/magehat/magehat/src/",
             "": [
                 "vendor/magento/app",
