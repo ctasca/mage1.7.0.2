@@ -4,3 +4,7 @@
 /vendor/
 /bin/
 behat.yml
+app/code/local/PocketMage
+app/etc/modules/PocketMage_Bakery.xml
+app/design/adminhtml/default/default/layout/bakery
+app/design/adminhtml/default/default/template/pocketmage

@@ -18,7 +18,8 @@
         "symfony/config": "*",
 		"symfony/css-selector":  ">=2.0.0,<2.2.0-dev",
 		"magehat/magehat": "dev-develop",
-		"magetest/magetest": "dev-develop"
+		"magetest/magetest": "dev-develop",
+		"pocketmage/bakery": "dev-develop"
     },
     "require-dev": {
         "phpspec/phpspec2": "dev-develop",
@@ -32,6 +33,14 @@
 		{
              "type": "vcs",
              "url": "git@git.gpmd.net:thirdparty/magetest.git"
+        },
+		{
+             "type": "vcs",
+             "url": "git@github.com:ctasca/bakery.git"
+        }, 
+		{
+            "type": "composer",
+            "url": "http://packages.firegento.com"
         }
     ],
     "autoload": {
@@ -55,5 +64,8 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra":{
+        "magento-root-dir": "./"
+    }
 }
